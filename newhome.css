@@ -32,23 +32,21 @@ color: #aaa;
   height: 400px;
   background-size: cover;
 }
-
-
-#menubar{
-  height: 90px;
+#bar
+{
     background-color: #373737;
-    /* position: relative;*/
     z-index: 200;
-    width: 100%;
-    color: #34495E;
-    /*transition: top 0.3s ease-in;*/
-    display: inline-block;
+    height: 90px;
+}
 
+#menubar
+{
+    color: #34495E; 
     opacity: 1;
-   /*transition: 0.3s ease-in;*/
+    width: 700px;
     font-family: 'montserrat';
     font-size: 15px;
-
+    display: inline-block;
 }
 
 #menubar a {
@@ -64,20 +62,32 @@ color: #aaa;
     transition: 0.3s ease-in;
     color: #48e0a4;
 }
+
+#icons
+{
+  display: inline-block;
+  float: right;
+}
+#icons > img
+{
+  width: auto;
+}
 #countdown
 {
-	 height: 100px;
+	 min-height: 200px;
     background: #283747;
     text-align: center;
     background: #373737;
     color: white;
     font-size: 40px;
     color: white;
+ 
 }
 #dates
 {
 padding: 30px;
 padding-top: 50px;
+
 }
 #contact
 {
@@ -121,39 +131,6 @@ padding-top: 50px;
 @keyframes stroke-offset{
     100% {stroke-dashoffset: -35%;}
 }
-/*.stylechange{
-    animation-name:opac;
-    /* -webkit-animation-name:poschan;*/
-     /*animation-name:poschan;
-    animation-duration:7s;
-    -webkit-animation-name:opac;
-    -webkit-animation-duration:7s;
-}
-@-webkit-keyframes opac{
-    from {opacity: 0.1;}
-    to {opacity: 1;}
-}
-@keyframes opac{
-    from {opacity: 0.1;}
-    to {opacity: 1;}
-}
-.poschange
-{
-  display: block;
-  position: relative;
-  -webkit-animation-name:poschan;
-  -webkit-animation-duration:4s;
-  animation-name:poschan;
-  animation-duration:4s;
-}
-@-webkit-keyframes poschan{
-  0% {left:-100px;}
-  100%{top:0px; }
-}
-@keyframes{
-  0%{left:-100px;}
-100%{left: 0px;}
-}*/
 #clockdiv{
   font-family: sans-serif;
   color: #fff;
@@ -162,12 +139,14 @@ padding-top: 50px;
   text-align: center;
   font-size: 30px;
   padding-top: 20px;
+  position: relative;
+  margin-top: 75px;
+  padding-bottom: 30px;
 }
 
 #clockdiv > div{
   padding: 10px;
   border-radius: 3px;
-  background: #00BF96;
   display: inline-block;
 }
 
@@ -334,7 +313,7 @@ height: 100%;
 
     .footer
     {
-      background-color: #313131;
+      background-color: #aaa;
       text-align: center; 
     }
 
@@ -342,36 +321,59 @@ height: 100%;
     {
       margin: 0px auto;
       padding-top: 30px;
-      width: 80%;
+      width: 90%;
     }
     #footerwrapper > div
     {
       margin: 10px auto;
     display: inline-block;
     width: 30%;
+    vertical-align: middle;
     }
     #footerwrapper >div >div
     {   color: #eee;
       display: inline-block;
     }
-    #footerwrapper > div> div>div
+    /* Can't understand why this is here. Remove the comments if there is an issue. If everything is working let it be
+/*    #footerwrapper > div> div>div
     {
       margin: 20px 0px;
       
-    }
+    } */
     #footerwrapper p
     {
       margin: 5px;
     }
 
-    #organization img
+
+    #organization>div
     {
-      width: 30%;
+      display: block;
+      width: 100%;
+    }
+    #organization h4
+    {
+      margin: 5px;
+      font-family: 'Open Sans';
+      color: #000;
+    }
+    #organization>div>div
+    {
+      display: inline-block;
+      widows: 50%;
+      text-align: center;
+    }  
+
+    #supporters>div
+    {
+      margin:0px 15px;
     }
     .sticky
     {
       position: fixed;
       top: 0px;
+      left: 0px;
+      right: 0px;
     }
 
 
@@ -396,4 +398,63 @@ height: 100%;
       text-align: center;
       padding: 40px 0px;
       background-color: #373737; 
+      color:white;
+      background-color: #19344F;
+
+    }
+
+    #sponsors hr
+    {
+      margin: 40px auto;
+      width: 60px;
+      height: 5px;
+      background: #ccc;
+      border: #ccc;
+      
+    }
+    #sponsorpara
+    {
+      width: 80%;
+      text-align: center;
+      margin-left: 140px;
+      font-size: 18px;
+      font-family: 'montserrat';
+      padding: 10px;
+    }
+    #countdates
+    {
+color: white;
+font-size: 20px;
+width: 80%;
+position: relative;
+margin-top: 50px;
+margin-left: 30px;
+padding-top: 50px;
+padding-left: 80px; 
+margin-bottom: -50px;
+font-family: 'montserrat';
+    }
+
+
+
+
+    #gototop
+    {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      width: 60px;
+      background: #cdcd33;
+      height: 60px;
+ }
+    .arrow
+    {
+opacity: 0;
+      transition: 0.3s all ease-in;
+    
+    }
+    .showarrow
+    {
+      transition: 0.3s all ease-in;
+     opacity: 1; 
     }
